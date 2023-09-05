@@ -9,30 +9,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
 import { UserComponent } from './shared/components/users/user/user.component';
 import { ProductComponent } from './shared/components/products/product/product.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AppRoutingModuleComponent } from './app-routing-module';
 
-const routes : Routes = [
-  {
-    path : '' , redirectTo : 'home' , pathMatch : 'full'
-  },
-  {
-    path : "home" , component : DasshboardComponent
-  },
-  {
-    path : "users" , component : UsersComponent
-  },
-  {
-    path: "products" , component : ProductsComponent
-  },
-  {
-    path: "users/:userId" , component : UserComponent
-  },
-  
-    {
-      path: "products/:productId" , component : ProductComponent
-    }
-  
-
-]
 
 
 @NgModule({
@@ -42,12 +21,14 @@ const routes : Routes = [
     UsersComponent,
     ProductsComponent,
     NavBarComponent,
-    UserComponent
+    UserComponent,
+    PageNotFoundComponent,
+   
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
-  
+    AppRoutingModuleComponent
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

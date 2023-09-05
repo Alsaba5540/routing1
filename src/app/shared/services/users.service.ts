@@ -29,6 +29,9 @@ export class UsersService {
  getAllUsers():Array<Iusers>{
   return this.usersArray
  }
+ getSingleUser(id : number){
+  return this.usersArray.find(user => user.userId === id )!
+ }
  
 
 }

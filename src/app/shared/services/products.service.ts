@@ -38,4 +38,11 @@ productsArray: Array<Iproducts> = [
     return this.productsArray
 
   }
+  // getSingleObject(id : number) {
+  //    return this.productsArray.find(product => product.pId === id)
+  // }
+
+  getSingleProduct(id : number){
+    return this.productsArray.find(pro => pro.pId === id )!
+  }
 }
